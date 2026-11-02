@@ -1,0 +1,12 @@
+# mulqi-auto-continue bundle patch.
+#
+# Mounted automatically when the package joins a profile's bundle stack
+# (dsh plugin --profile <name> add ...), or manually from any profile's
+# cordis.patch.yml user layer with the same insert row. The bare package
+# name resolves through Node's ordinary node_modules walk, so the package
+# directory may live in the profile's own node_modules or in the shared
+# $DSH_HOME/profiles/node_modules fallback.
+- insert:
+    - id: mulqi-auto-continue
+      name: mulqi-auto-continue
+      config: {}
